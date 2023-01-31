@@ -9,8 +9,15 @@ import Equipdata from "./components/Equipdata"
 export default function App(){
     const [itemsInCart, setItemsInCart] = React.useState(0)
 
-    function addToCart(){
-        setItemsInCart(prevCount => prevCount+1)
+    function addToCart(event){
+        if(event.target.textContent === "Add to cart"){
+            setItemsInCart(prevCount => prevCount+1)
+            event.target.textContent = "Remove from cart"
+        }
+        else{
+            setItemsInCart(prevCount => prevCount-1)
+            event.target.textContent = "Add to cart"
+        }
     }
 
     const EquipmentList = Equipdata.map(items => {

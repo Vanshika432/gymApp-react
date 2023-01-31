@@ -1,5 +1,6 @@
 import React from "react";
 import gymlogo from "../images/gym-logo.png"
+import "../css/Navbar.css"
 
 export default function Navbar(){
     return(

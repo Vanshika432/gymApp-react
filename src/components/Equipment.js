@@ -1,4 +1,5 @@
 import React from "react"
+import "../css/Card.css"
 
 export default function Equipment(items){
     return(
